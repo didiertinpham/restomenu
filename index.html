@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=410, initial-scale=1 user-scalable=yes">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="burgerButton"> <!-- BURGER BUTTON --></div>
+        <div class="container-fluid">
+            <nav id="nav">
+                <div id="sidebar">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#" id="navLinks">Home</a></li>
+                        <li class="nav-item"><a href="#ville-meals" id="navLinks">Menu</a></li>
+                        <li class="nav-item"> <a href="#welcome-title" id="navLinks">About Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    <!------------------------main----------------------------- -->
+    <main id="main">
+        <div class="main" id=main">
+            <div class="container">
+                <img src="9.jpg" id="logo"alt="">
+                <div class="burgerville-title">
+                    <h1 class="title">BurgerVille</h1>
+                </div>
+            </div>
+        </div>
+    </main>  
+      <!----------------------Menu--------------------------->
+    <section class="food">
+        <h2 id="ville-meals">Meals</h2>
+        <div class="meals">
+            <div class="item">
+                <img src="1.jpg" alt=""/>
+                <h3 class="meal-name"><strong>Friday Night</strong></h3>
+                <p class="description">
+                    Half pound beef patty with lettuce,<br>
+                    tomato, onions and special sauce <br>
+                    accomapanied with a choice of fries,<br>
+                    seasoned fries or onion rings<br>
+                </p>       
+                <p class="price">19</p>         
+            </div>
+            <div class="item">
+                <img src="2.jpg" alt=""/>
+                <h3 class="meal-name"><strong>Wall Art</strong></h3>
+                <p class="description">
+                    Quarter pound beef patty, mushrooms with<br>
+                    special sauce, tomato, slice of cheddar cheese,<br>
+                    bacon and lettuce with choice of fries,<br>
+                    seasoned fries or onion rings<br>
+                </p>
+                <p class="price">15</p>  
+            </div>
+            <div class="item">
+                <img src="3.jpg" alt=""/>
+                <h3 class="meal-name"><strong>Town Square</strong></h3>
+                <p class="description">
+                    Half pound of pulled pork, special<br>
+                    sauce, mushrooms and cheddar cheese<br>
+                    with a choice of fries, seasoned<br>
+                    fries or onion rings
+                </p>
+                <p class="price">16</p>  
+            </div>
+            <div class="item">
+                <img src="4.jpg" alt=""/>
+                <h3 class="meal-name"><strong>City Park</strong></h3>
+                <p class="description">
+                    Grilled chicken beef patty, special<br>
+                    special sauce, cheddar cheese, bacon,<br>
+                    lettuce and tomato accomapanied with<br>
+                    a choice of fries, seasoned fries or<br>
+                    onion rings
+                </p>
+                <p class="price">23</p>  
+            </div>
+        </div>
+        <h2 id="ville-desserts">Desserts</h2>
+        <div class="desserts">
+            <div class="item">
+                <img src="5.jpg" alt=""/>
+                <h3 class="meal-name"><strong>Cookie</strong></h3>
+                <p class="description">
+                    Ice cream cookie sandwich. Choose<br>
+                    your ice cream and cookies<br>
+                </p>
+                <p class="price">9</p>  
+            </div>
+            <div class="item">
+                <img src="6.jpg" alt=""/>
+                <h3 class="meal-name"><strong>Cheesecake</strong></h3>
+                <p class="description">
+                    Caramel and nut covered cheesecake
+                </p>
+                <p class="price">8</p>  
+            </div>
+            <div class="item">
+                <img src="7.jpg" alt=""/>
+                <h3 class="meal-name"><strong>Oreo</strong></h3>
+                <p class="description">
+                    The name says it all, Oreo cake 
+                </p>
+                <p class="price">6</p>  
+            </div>
+            <div class="item">
+                <img src="8.jpeg" alt=""/>
+                <h3 class="meal-name"><strong>Banana Split</strong></h3>
+                <p class="description">
+                    Three balls of cream surrounded<br>
+                    with two bananas and covered<br>
+                    with nuts, whipped cream and<br>
+                    chocolate syrup
+                </p>
+                <p class="price">10</p>  
+            </div>
+        </div>
+    </section>                               
+            <!---------------------------welcome---------------------------->
+        <div class="welcome-section">
+            <div class="welcome">
+                <h2 id="welcome-title">Welcome to Burgerville</h2>
+                <p>Burgerville is a family owned restaurant that opened in 1990. 
+                    Throughout the years, we successfully marked our path with 
+                    iconic burgers and sauces and we thank you for your support 
+                </p>
+            </div>    
+        </div>        
+    <!-------------------------------footer---------------------------------------------->
+        <div class="footer" id="footer">
+            <div class="contact" onclick="myfunction()"><p id="contacts">Contact us</p>
+                <span class="contactText" id="myContact">
+                    <ul>
+                        <li>Telephone: 514-555-5555</li>
+                        <li>support@burgerville.com</li>
+                        <li>www.burgerville.com</li>
+                    </ul>
+                </span>
+            </div>
+            <div class="schedule" onclick="myFunction()"><p id="schedules">Open Hours</p>
+                <span class="scheduleText" id="mySchedule">
+                    <ul>
+                        <li>Mon: 11:00-21:00</li>
+                        <li>Tue: 11:00-21:00</li>
+                        <li>Wed: 11:00-21:00</li>
+                        <li>Thu: 11:00-21:00</li>
+                        <li>Fri: 11:00-21:00</li>
+                        <li>Sat: 11:00-21:00</li>
+                        <li>Sun: 11:00-21:00</li>
+                    </ul>
+                </span>
+            </div>
+        </div>        
+        <script src="script.js"></script>
+</body>
+</html>

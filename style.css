@@ -1,0 +1,388 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%; /* 1em = 10px*/
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+#burgerButton{
+    background-color: rgb(90, 90, 90);
+    height: 50px;
+    width: 50px;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    justify-content: center; /* line*/
+    align-items: center; /* line */
+    cursor: pointer;
+    border-radius: 50%;
+    position: fixed;
+}
+#burgerButton::before{ /*top line*/
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    transition: 0.2s;
+    background: #fff;
+    transform: translateY(-5px);
+}
+#burgerButton::after{ /*bottom line*/ 
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    transition: 0.2s;
+    background: #fff;
+    transform: translateY(5px);
+}
+/*------------------x transition when pressed----*/
+#burgerButton.active::before{
+    transform: translateY(0px) rotate(45deg);
+}
+#burgerButton.active::after{
+    transform: translateY(0px) rotate(-45deg);
+}/*-----------------------//////////x transition when pressed----*/
+
+/*----------------------------------sidebar---------------------------------*/
+#sidebar ul li{
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+}
+#sidebar ul li:hover{
+    background: #7c0707;
+}
+#sidebar ul li a{
+    color: #fff;
+    text-decoration: none;
+    line-height: 3em;
+    font-size: 2em;
+    margin-left: 1em;
+}
+#sidebar{
+    list-style: none;
+    position: fixed;
+    bottom: 0;
+    left: -300px;
+    width: 200px;
+    height: 100%;
+    background-color: rgba(78, 85, 76, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: 0.5s;
+}
+#sidebar.active{        /* slides side bar out */
+    left: 0px;
+    transition: 0.5s;    
+}
+/*------------------////////////////////////sidebar------------------------------*/
+#navLinks{
+    display: block;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    margin-right: -2px;
+    transition: color 0.5s;
+}
+/* <<<<<--------------main------------------>>>>>  */
+.main{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("10.jpg"); /* darken city image*/
+    background-size: cover;
+    text-align: center; /* center logo child*/
+}
+#logo{
+    width: 200px;
+    height: 200px;
+    border-radius: 60px; 
+    margin-top: 10em;   /*lower logo*/
+}
+.burgerville-title{
+    font-size: 6rem;
+    font-family: "Cormorant";
+    text-shadow: 4px 4px gray;
+    color: #fff;
+    text-align: center; /* centers Burgerville*/
+}
+.title{
+    padding-bottom: 0.5em;
+}
+/*<-----------menu--------------------------->*/
+.food{
+    background-color: #6a1a1a;
+}
+.food h3{
+    margin-bottom: 5rem;
+}
+#ville-meals,
+#ville-desserts{
+    color: rgb(228, 228, 228);
+    font-size: 6rem;
+    font-family: Cormorant;
+    text-align: center;
+    margin-bottom: 0.5em;
+    padding-top: 1em;
+}
+item{
+    margin-top: 2em;
+}
+img{
+    width: 250px;
+    height: 175px;
+    margin: 0 2em;
+    border-radius: 20px;
+}
+.meals, 
+.desserts{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 1em;
+}
+.meal-name{
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: "Cormorant";
+    color: rgb(224, 193, 157);
+    text-align: center;
+    margin-top: 0.5em;
+}
+.description{
+    font-size: 12px;
+    display: flex;
+    color: #adadad;
+    margin-bottom: 0.5em;
+    justify-content: center;
+    text-align: center;
+    margin-top: -3.5em;
+}
+.price{
+    display: flex;
+    justify-content: center;
+    color: honeydew;
+    font-size: 20px;
+    margin-bottom: 2em;
+    margin-top: 0.5em;
+}
+/* -------------------------welcome--------------*/
+.welcome-section{
+    display: flex;
+    height: 400px;
+    background-color: #333;
+    text-align: center; /*centers #welcome*/
+    justify-content: center; /*moves #welcome*/
+}
+#welcome-title{
+    line-height: 2.5em;
+    color: rgb(185, 185, 185);
+    font-size: 40px;
+}
+.welcome p{
+    font-size: 20px;
+    line-height: 1.5em;
+    margin-top: 1em;
+}
+.welcome{
+    width: 100vw;/* 100% of viewport width*/
+    margin: 40px;/* auto centers*/
+    height: 100vh;
+    line-height: 1.5em;
+    color: rgb(179, 179, 179);
+}
+/* <<----------------- footer-------------------------->>*/
+.footer{
+    position: relative;    
+}
+/*------------------------------contact popup--------------->>>>*/
+/* Popup container - can be anything you want */
+.contact {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#contacts{             /*--------contact us---------- */
+    position: absolute;
+    left: 2em;
+    font-size: 4em;
+    margin-top: 2em;
+}
+.contactText {
+    position: absolute;
+    font-size: 2.4em;
+    left: 0em;
+}
+.contactText ul li{
+    list-style: none;
+    color: rgb(228, 228, 228);
+}
+.contact .contactText {
+    visibility: hidden;
+    width: 400px;
+    height: 200px;
+    background-color: rgb(61, 103, 158);
+    line-height: 2em;
+    color: #fff;
+    border-radius: 6px;
+    padding: 1em 1em;
+    position: absolute;
+    bottom: 125%;
+}
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .contact .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+.schedule {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#schedules{            /*--------schedule---------- */
+    position: absolute;
+    right: 2em;
+    font-size: 4em;
+    margin-top: 2em;    
+}
+.scheduleText {
+    position: absolute; 
+    font-size: 2em;
+    right: 0em;
+}
+.scheduleText ul li{
+    list-style: none;
+    color: rgb(228, 228, 228); 
+    text-align: end;
+    line-height: 1.4em;
+    letter-spacing: 2px;
+}
+.schedule .scheduleText {
+    visibility: hidden;
+    width: 300px;
+    height: 250px;
+    background-color: rgb(61, 103, 158);
+    color: #fff;
+    border-radius: 6px;
+    padding: 1em 2em;
+    position: absolute;
+    bottom: 125%;
+}
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .schedule .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+@media screen and (max-width: 650px){
+    .title{
+        font-size: 1.2em;
+        padding-top: 20px;
+    }
+    .container{
+        height: 450px;
+    }
+    #logo{
+        margin-top: 10em;
+    }
+    .contactText {
+        font-size: 1.5em;
+        left: 0em;
+        letter-spacing: 1px;
+    }
+    .contact .contactText {
+        visibility: hidden;
+        width: 240px;
+        height: 115px;
+        padding: 0.5em 1em;
+    }
+    .scheduleText {
+        font-size: 1.5em;
+        right: 0em;
+    }
+    .schedule .scheduleText {
+        visibility: hidden;
+        width: 190px;
+        height: 160px;
+        padding: 0.5em 1em;
+    }
+    #contacts{             
+        font-size: 2em;
+    }
+    #schedules{  
+        font-size: 2em;  
+    }
+    .schedule .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s
+    }
+    .contact .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s
+    }
+    #sidebar{
+        bottom: 0;
+        width: 200px;
+        height: 290px;
+    }
+    .welcome{
+        height: 465px;
+    }
+    .welcome p{
+        margin-top: 0;
+    }
+    #welcome-title{
+        line-height: 1.2em;
+        color: rgb(185, 185, 185);
+        font-size: 40px;
+        padding-bottom: 0.8em;
+    }
+    .price{
+        display: flex;
+        justify-content: center;
+        color: honeydew;
+        font-size: 20px;
+        margin-bottom: 2em;
+        margin-top: 0.5em;
+    }
+    .description{
+        margin-bottom: 0;
+    }
+}
